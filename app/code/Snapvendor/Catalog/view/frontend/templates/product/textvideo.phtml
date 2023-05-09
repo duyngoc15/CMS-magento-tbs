@@ -1,0 +1,11 @@
+<?php
+$_product = $block->getProduct();
+// dd($_product->getVideoAttribute());
+if($_product->hasData('video_attribute'))
+{
+    $video = $_product->getVideoAttribute();
+        if ($video != ''){
+            echo '<div class="test"><a href="'.$video.'">Product Video Link</a></div>';
+ }
+}
+?>

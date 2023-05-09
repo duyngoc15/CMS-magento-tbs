@@ -1,0 +1,14 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="custom_brands">
+        <column xsi:type="int" name="brand_id" padding="10" unsigned="true" nullable="false" comment="Brand ID"/>
+        <column xsi:type="boolean" name="is_active" padding="10" unsigned="true" nullable="false" comment="Is Active"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="text" name="desc" nullable="true"  comment="Description"/>
+        <column xsi:type="int" name="sort_order" nullable="true" comment="Sort Order"/>
+        <column xsi:type="varchar" name="image" nullable="true" comment="Image"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="brand_id"/>
+        </constraint>
+   </table>
+</schema>

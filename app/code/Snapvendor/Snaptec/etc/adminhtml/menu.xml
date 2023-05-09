@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Snapvendor_Snaptec::snaptec" title="Snaptec" translate="title" module="Snapvendor_Snaptec" sortOrder="10" resource="Snapvendor_Snaptec::snaptec" dependsOnConfig="brand_section/general/enable"/>
+        <add id="Snapvendor_Snaptec::brands" title="Brands" module="Snapvendor_Snaptec" sortOrder="20" action="snaptec/post" parent="Snapvendor_Snaptec::snaptec" resource="Snapvendor_Snaptec::brands"/>
+    </menu>
+</config>

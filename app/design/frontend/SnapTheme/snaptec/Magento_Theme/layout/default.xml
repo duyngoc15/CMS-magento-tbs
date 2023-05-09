@@ -1,0 +1,51 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+    <update handle="default_head_blocks" />
+    <!--removed-->
+      <referenceBlock name="register-link" remove="true" />
+      <referenceBlock name="catalog-search-advanced-link" remove="true" />
+      <referenceBlock name="catalog.compare.link" remove="true"/>
+      <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+      <referenceBlock name="footer_links" remove="true" />
+      <referenceBlock name="top.search" remove="true"/>
+      <referenceBlock name="copyright" remove="true"/>
+      <referenceBlock name="skip_to_content" remove="true"/>
+      <referenceBlock name="authorization-link" remove="true" />
+      <referenceBlock name="store_language" remove="true" />
+      <referenceBlock name="header" remove="true"/>
+      <!--end removed-->
+    <referenceContainer name="header.container">
+      <referenceContainer name="header.panel.wrapper" label="headerContainer" htmlTag="div" htmlClass="header-inner">
+          <referenceContainer name="header.panel" htmlTag="div" htmlClass="top-header-links-div">
+              <container name="header.inner.flex" label="headerGrid" htmlTag="div" htmlClass="row">
+                  <container name="header.left" label="headerLeft" htmlTag="div" htmlClass="col-lg-4">
+                      <block class="Magento\Framework\View\Element\Template" name="location_icon" as="location_icon" template="Magento_Theme::location-icon.phtml" />
+                  </container>
+                  <container name="header.center" label="headerCenter" htmlTag="div" htmlClass="col-lg-4" />
+                  <container name="header.right" label="headerRight" htmlTag="div" htmlClass="col-lg-4">
+                      <container name="header.account" htmlTag="div" htmlClass="header-account-div">
+                          <container name="header.right.account" htmlTag="ul" htmlClass="account-container">
+                              <block class="Magento\Framework\View\Element\Template" name="icons" as="icons" template="Magento_Theme::icons.phtml" />
+                          </container>
+                      </container>
+                  </container>
+              </container>
+          </referenceContainer>
+      </referenceContainer>
+    </referenceContainer>
+    <referenceContainer name="footer-container">
+      <container name="footer.header" label="footerHeader" htmlTag="div" htmlClass="footer head">
+          <block class="Magento\Cms\Block\Block" name="test-block">
+              <arguments>
+                    <argument name="block_id" xsi:type="string">test-block</argument>
+              </arguments>
+          </block>
+          <block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active"/>
+      </container>
+    </referenceContainer>
+<!--move-->
+      <move element="logo" destination="header.center" />
+      <move element="minicart" destination="header.right.account" after="-"/>
+  </body>
+</page>

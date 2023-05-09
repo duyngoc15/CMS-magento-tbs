@@ -1,0 +1,2 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1683617420;s:6:"expire";i:1683624620;s:4:"tags";s:49:"c84_STORE,c84_CONFIG,c84_COLLECTION_DATA,c84_MAGE";}
+[{"store_id":"2","code":"another_store_view","website_id":"1","group_id":"1","name":"Another store view","sort_order":"0","is_active":"1"},{"store_id":"1","code":"en","website_id":"1","group_id":"1","name":"English","sort_order":"0","is_active":"1"},{"store_id":"3","code":"vi","website_id":"1","group_id":"1","name":"vietnamese","sort_order":"1","is_active":"1"}]
