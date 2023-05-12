@@ -6,14 +6,14 @@ class Collection extends \Snapvendor\Snaptec\Model\ResourceModel\Post\Collection
 {
     /**
      * Aggregations
-     * 
+     *
      * @var \Magento\Framework\Search\AggregationInterface
      */
     protected $_aggregations;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory
      * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
@@ -23,7 +23,7 @@ class Collection extends \Snapvendor\Snaptec\Model\ResourceModel\Post\Collection
      * @param $eventObject
      * @param $resourceModel
      * @param $model
-     * @param $connection
+     * @param \Magento\Framework\DB\Adapter\AdapterInterface $connection
      * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource
      */
     public function __construct(

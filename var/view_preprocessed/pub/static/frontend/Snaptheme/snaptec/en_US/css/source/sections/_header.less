@@ -1,0 +1,57 @@
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .logo {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        //margin-top: 20px;
+    }
+    header.page-header{
+        background: #004236;
+        margin-top: 0;
+    }
+    a.align-icon{
+        display: inline-block;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: white;
+        padding-left: 50px;
+    }
+    ul.account-container{
+        display:flex;
+        float: right;
+        padding-right: 50px;
+    }
+    .icons{
+        background-size:100%;
+        margin:0 7px;
+        display:inline-block;
+    }
+    span.icons.icon-location {
+        width:20px;
+        height:23px;
+        background: url(https://www.thebodyshop.com.sa/east/pub/static/frontend/Smartwave/porto_child/en_US/images/locationfront.svg) no-repeat center;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    span.icons.icon-search{
+        width: 33px;
+        height: 29px;
+        background: url(https://www.thebodyshop.com.sa/east/pub/static/frontend/Smartwave/porto_child/en_US/images/3.png) no-repeat center;
+        background-size: 100% !important;
+        cursor: pointer;
+    }
+    span.icons.icon-account{
+        width: 33px;
+        height: 29px;
+        background: url(https://www.thebodyshop.com.sa/east/pub/static/frontend/Smartwave/porto_child/en_US/images/1.png) no-repeat center;
+        background-size: 100% !important;
+        cursor: pointer;
+    }
+    span.icons.icon-wishlist{
+        width: 33px;
+        height: 29px;
+        background: url(https://www.thebodyshop.com.sa/east/pub/static/frontend/Smartwave/porto_child/en_US/images/2.png) no-repeat center;
+        background-size: 100% !important;
+        cursor: pointer;
+    }
+}

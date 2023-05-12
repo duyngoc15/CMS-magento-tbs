@@ -1041,7 +1041,9 @@ abstract class Zend_Db_Adapter_Abstract
     {
         if ($auto === false || $this->_autoQuoteIdentifiers === true) {
             $q = $this->getQuoteIdentifierSymbol();
-            return ($q . str_replace("$q", "$q$q", $value) . $q);
+            // modified by duy cause str_replace deprecated in php 8.1
+            return ($q . str_replace("$q", "$q$q", $value ?? '') . $q);
+            // end modified
         }
         return $value;
     }

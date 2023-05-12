@@ -160,10 +160,12 @@ class PaymentInformationManagement implements \Magento\Checkout\Api\PaymentInfor
             );
         } catch (\Exception $e) {
             $this->logger->critical($e);
+            // throw new CouldNotSaveException(
+            //     __('A server error stopped your order from being placed. Please try to place your order again.'),
+            //     $e
+            // );
             throw new CouldNotSaveException(
-                __('A server error stopped your order from being placed. Please try to place your order again.'),
-                $e
-            );
+                __($e->getMessage()), $e);
         }
         return $orderId;
     }
